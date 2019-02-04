@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  urlApi: 'https://mighty-refuge-81707.herokuapp.com/api/',
+  registerEndPoint: 'auth/user/create',
+  loginEndPoint: 'auth/user/authenticate',
+  accountsEndPoint: 'accounts',
+  catalogsEndPoit: 'catalogs/cards',
+
 };
 
 /*

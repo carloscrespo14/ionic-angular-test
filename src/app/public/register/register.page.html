@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>M<span>i</span>Banca</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding color="secondary">
+  <ion-card>
+    <ion-card-header>
+      <ion-icon name="contact"></ion-icon>
+    </ion-card-header>
+  
+    <ion-card-content>
+     
+      <ion-item>
+        <ion-input type="email" placeholder="Correo Electronico" [(ngModel)]="email"  id="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="text" placeholder="Nombre" [(ngModel)]="firstname"  id="firstname"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="text" placeholder="Apellido" [(ngModel)]="lastname"  id="lastname"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="password" placeholder="Contraseña" [(ngModel)]="password"  id="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="password" placeholder="Confirmar Contraseña" [(ngModel)]="confirm_pass"  id="confirm_pass"></ion-input>
+      </ion-item>
+
+      <div>
+        <ion-button class expand="block" (click)="setRegister()">enviar</ion-button>
+        tienes Cuenta? <a (click)="goLogin($event)">Logearse</a>
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

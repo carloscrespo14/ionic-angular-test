@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title slot="start">M<span>i</span>Banca</ion-title>
+    <ion-title slot="end">
+      <span class="users_name"> Hola {{username}} </span> <a (click)="doLogout($event)"><span>Logout</span></a>
+    </ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding color="secondary">
+  <ion-card>
+    <ion-card-header>
+      <span>Solictud de Cuenta</span>
+    </ion-card-header>
+    <ion-card-content>
+        <ion-item>
+          <ion-label>Tipo de Cuenta</ion-label>
+          <ion-select placeholder="Seleccione Una" (ionChange)="selectHandler($event)">
+            <ion-select-option *ngFor="let item of type_cards" value={{item.type}}>{{item.name}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-button class expand="block" (click)="setRequestCards()">solicitar</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+      <ion-card-header>
+      </ion-card-header>
+    
+      <ion-card-content>
+       
+  
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>

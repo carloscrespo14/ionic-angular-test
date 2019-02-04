@@ -1,0 +1,31 @@
+a {
+    color:#fff;
+     span {
+         font-size: .8em;
+         padding-right: 1em;
+     }
+}
+
+ion-content{
+    ion-card{
+        background: rgb(255, 255, 255);
+        ion-card-header{
+            width: 100%;
+            ion-icon{
+                width: 100%;
+            }
+        }
+    }
+}
+
+ion-label {
+    font-size: 10px;
+}
+
+ion-title {
+    span.users_name {
+        font-size:.8em;
+        text-transform: capitalize;
+        margin-right: 1em;
+    }
+}

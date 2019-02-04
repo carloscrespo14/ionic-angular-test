@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>M<span>i</span>Banca</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding color="secondary">
+  <ion-card>
+    <ion-card-header>
+      <ion-icon name="contact"></ion-icon>
+    </ion-card-header>
+  
+    <ion-card-content>
+     
+      <ion-item>
+        <ion-input type="email" placeholder="Correo Electronico" [(ngModel)]="user"  id="user"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="password" placeholder="Contraseña" [(ngModel)]="pass"  id="pass"></ion-input>
+      </ion-item>
+      <div>
+        <ion-button class expand="block" (click)="setLogin()">Login</ion-button>
+        No tienes Cuenta? <a (click)="goRegistration($event)">Registrarse</a>
+      </div>
+
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

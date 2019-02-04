@@ -1,0 +1,31 @@
+ion-title{
+    span{
+        font-size: 1.5em;
+    }
+}
+
+ion-content{
+    ion-card{
+        background: rgb(255, 255, 255);
+        ion-card-header{
+            width: 100%;
+            ion-icon{
+                width: 100%;
+                font-size: 7em;
+                text-align: center;
+            }
+        }
+        ion-card-content{
+            div{
+                margin-top: 15px;
+                text-align: center;
+                font-size: .8em;
+            }
+        }
+    }
+
+}
+
+a{
+    cursor: pointer;
+}
