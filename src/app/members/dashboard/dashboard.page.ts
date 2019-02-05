@@ -45,7 +45,8 @@ export class DashboardPage implements OnInit {
     .subscribe(
       data => {
         console.log(data);
-        this.list_accounts = data;
+        this.list_accounts = data.response;
+        console.log(this.list_accounts);
       }
     );
   }
