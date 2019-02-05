@@ -28,11 +28,57 @@
   
   <ion-card>
       <ion-card-header>
+        Cuentas
       </ion-card-header>
     
       <ion-card-content>
-       
-  
+          <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <div>
+                    Cuenta
+                  </div>
+                </ion-col>
+                <ion-col>
+                  <div>
+                    Depositos
+                  </div>
+                </ion-col>
+                <ion-col>
+                  <div>
+                   Retiros
+                  </div>
+                </ion-col>
+                <ion-col>
+                  <div>
+                    Saldo
+                  </div>
+                </ion-col>
+              </ion-row>
+             
+              <ion-row *ngFor="let account of list_accounts" >
+                  <ion-col>
+                    <div>
+                      {{account.name}}
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div>
+                      {{account.deposits}}
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div>
+                      {{account.withdrawals}}
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div>
+                      {{account.balance}}
+                    </div>
+                  </ion-col>
+              </ion-row>
+            </ion-grid>
       </ion-card-content>
     </ion-card>
 

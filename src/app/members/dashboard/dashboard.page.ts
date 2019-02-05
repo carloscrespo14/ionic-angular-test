@@ -3,6 +3,7 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 import { Router } from '@angular/router';
 import { HttpApiService } from 'src/app/services/http-api.service';
 import { environment } from 'src/environments/environment';
+import { Account } from 'src/app/classes/accounts';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,7 +14,9 @@ export class DashboardPage implements OnInit {
   endPoint: String = environment.accountsEndPoint;
   endPointCatalog: String = environment.catalogsEndPoit;
   type_cards: Array<any> = [];
-  body: Object = {};
+  body = {};
+  list_accounts: Account[];
+
   constructor(private authServ: AuthenticationService, private router: Router, private httpservice: HttpApiService) { }
   username: String;
   ngOnInit() {
@@ -32,7 +35,6 @@ export class DashboardPage implements OnInit {
     this.httpservice.getCatalog(this.endPointCatalog)
     .subscribe(
       data => {
-        console.log(data.response.type_cards);
         this.type_cards = data.response.type_cards;
       }
     );
@@ -43,6 +45,7 @@ export class DashboardPage implements OnInit {
     .subscribe(
       data => {
         console.log(data);
+        this.list_accounts = data;
       }
     );
   }

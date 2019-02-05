@@ -33,6 +33,8 @@ export class RegisterPage implements OnInit {
         password: this.password
     };
 
+    console.log(body);
+
     this.httpService.addUser(body, this.endPoint)
     .subscribe(
       res => {
