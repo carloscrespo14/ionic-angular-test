@@ -44,19 +44,16 @@ export class DashboardPage implements OnInit {
     this.httpservice.getAccounts(this.endPoint)
     .subscribe(
       data => {
-        console.log(data);
         this.list_accounts = data.response;
-        console.log(this.list_accounts);
       }
     );
   }
 
   setRequestCards() {
-    console.log(this.body);
     this.httpservice.addAccounts(this.body, this.endPoint)
     .subscribe (
       data => {
-        console.log(data);
+        this.presentAlert();
       }
     );
   }
@@ -77,6 +74,18 @@ export class DashboardPage implements OnInit {
         name: 'Tarjeta Oro'
       };
     }
+  }
+
+  async presentAlert(msg) {
+    const alertController = document.querySelector('ion-alert-controller');
+    await alertController.componentOnReady();
+    const alert = await alertController.create({
+      header: 'Alert',
+      subHeader: 'Statud',
+      message: 'Solicitud enviada',
+      buttons: ['OK']
+    });
+    return await alert.present();
   }
 
 
