@@ -76,12 +76,12 @@ export class DashboardPage implements OnInit {
     }
   }
 
-  async presentAlert(msg) {
+  async presentAlert() {
     const alertController = document.querySelector('ion-alert-controller');
     await alertController.componentOnReady();
     const alert = await alertController.create({
-      header: 'Alert',
-      subHeader: 'Statud',
+      header: 'Mensaje',
+      subHeader: 'Status',
       message: 'Solicitud enviada',
       buttons: ['OK']
     });
